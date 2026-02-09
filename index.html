@@ -2,67 +2,77 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aju Krishna B | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aju Krishna | Portfolio</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" type="image/png" href="assets/icons/logo.png" />
-  <script src="https://unpkg.com/lottie-web@5.12.0/build/player/lottie.min.js"></script>
+
+  <!-- Icons (optional – works if you add icons later) -->
+  <link rel="icon" href="assets/icons/favicon.png" />
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="logo">Aju Krishna B</div>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- ===== Navbar ===== -->
+  <header class="navbar">
+    <div class="logo">Aju<span>.</span></div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <!-- ===== Hero Section ===== -->
   <section class="hero">
-    <div class="hero-text">
-      <h1><span id="typed">Hi, I'm Aju Krishna</span></h1>
-      <p>Full-stack Developer & Tech Enthusiast.</p>
+    <div class="hero-content">
+      <h1>Hi, I'm <span>Aju Krishna</span></h1>
+      <h2>
+        I'm a <span class="typing-text"></span>
+      </h2>
+      <p>
+        Passionate about building clean, interactive, and meaningful digital
+        experiences. I love turning ideas into real-world projects.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="projects.html" class="btn primary">View Projects</a>
+        <a href="assets/resume.pdf" class="btn secondary" download>Download Resume</a>
+      </div>
     </div>
-    <div class="hero-img">
-      <img src="assets/images/profile.png" alt="Profile Icon" />
+
+    <div class="hero-image">
+      <img src="assets/images/profile.png" alt="Aju Krishna" />
     </div>
   </section>
 
-  <!-- 🌟 New: Quick Links with Animated Lottie Icons -->
-<section class="quick-links">
-  <h2>Explore My Portfolio</h2>
-  <div class="icon-buttons">
-    <a href="about.html" class="icon-btn">
-      <div class="lottie" data-lottie="about"></div>
-      <span>About Me</span>
-    </a>
-    <a href="skills.html" class="icon-btn">
-      <div class="lottie" data-lottie="skills"></div>
-      <span>Skills</span>
-    </a>
-    <a href="projects.html" class="icon-btn">
-      <div class="lottie" data-lottie="projects"></div>
-      <span>Projects</span>
-    </a>
-    <a href="resume.html" class="icon-btn">
-      <div class="lottie" data-lottie="resume"></div>
-      <span>Resume</span>
-    </a>
-    <a href="contact.html" class="icon-btn">
-      <div class="lottie" data-lottie="contact"></div>
-      <span>Contact</span>
-    </a>
-  </div>
-</section>
+  <!-- ===== Quick Stats ===== -->
+  <section class="stats">
+    <div class="stat">
+      <h3>16+</h3>
+      <p>Projects</p>
+    </div>
+    <div class="stat">
+      <h3>2+</h3>
+      <p>Years Learning</p>
+    </div>
+    <div class="stat">
+      <h3>100%</h3>
+      <p>Passion</p>
+    </div>
+  </section>
 
-  <footer>
-    <p>&copy; 2025 Aju Krishna. All rights reserved.</p>
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <p>© 2026 Aju Krishna. All Rights Reserved.</p>
   </footer>
-  
+
+  <!-- JS -->
   <script src="js/script.js"></script>
 </body>
 </html>
