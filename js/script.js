@@ -1,87 +1,57 @@
-// ===== Dynamic Typing Effect =====
-// ===== Dynamic Typing Effect =====
-const text = [
-  "Hi, I'm Aju Krishna.B",
-  "A Full-Stack Developer.",
-  "A Tech Enthusiast.",
-  "Crafting modern web experiences.",
-  "Lover of clean code & great UI.",
-  "Exploring the future with code.",
-  "Building smarter, better systems.",
-  "Turning ideas into digital reality.",
-  "Always learning. Always creating.",
-  "Let's build something amazing!"
+/* =========================
+   Typing Animation
+========================= */
+
+const textArray = [
+  "Web Developer",
+  "Frontend Developer",
+  "Creative Thinker",
+  "Problem Solver"
 ];
 
+const typingText = document.querySelector(".typing-text");
 
-let i = 0, j = 0;
-let currentText = '', isDeleting = false;
+let textIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
 
-function type() {
-  if (i < text.length) {
-    currentText = text[i];
-    const typedElement = document.getElementById("typed");
+function typeEffect() {
+  if (!typingText) return;
 
-    if (typedElement) {
-      typedElement.innerHTML = currentText.substring(0, j) + (j % 2 === 0 ? "|" : "");
+  const currentText = textArray[textIndex];
 
-      if (!isDeleting) {
-        j++;
-        if (j === currentText.length + 1) {
-          isDeleting = true;
-          setTimeout(type, 1500);
-          return;
-        }
-      } else {
-        j--;
-        if (j === 0) {
-          isDeleting = false;
-          i = (i + 1) % text.length;
-        }
-      }
-      setTimeout(type, isDeleting ? 50 : 100);
+  if (!isDeleting) {
+    // Typing
+    typingText.textContent = currentText.substring(0, charIndex + 1);
+    charIndex++;
+
+    if (charIndex === currentText.length) {
+      setTimeout(() => (isDeleting = true), 1200);
+    }
+  } else {
+    // Deleting
+    typingText.textContent = currentText.substring(0, charIndex - 1);
+    charIndex--;
+
+    if (charIndex === 0) {
+      isDeleting = false;
+      textIndex = (textIndex + 1) % textArray.length;
     }
   }
-}
-type();
 
-// ===== Optional: Smooth Scroll for Anchor Links =====
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth"
-      });
-    }
-  });
-});
-
-// ===== Optional: Scroll to Top Button Logic =====
-// (if you plan to use one)
-const scrollTopBtn = document.getElementById("scrollTopBtn");
-if (scrollTopBtn) {
-  window.addEventListener("scroll", () => {
-    scrollTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
-  });
-
-  scrollTopBtn.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  });
+  const speed = isDeleting ? 80 : 120;
+  setTimeout(typeEffect, speed);
 }
 
-// ===== Lottie Icon Loader =====
-document.querySelectorAll('.lottie').forEach((el) => {
-  const animName = el.getAttribute('data-lottie');
-  lottie.loadAnimation({
-    container: el,
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    path: `assets/lottie/${animName}.json`
-  });
+document.addEventListener("DOMContentLoaded", typeEffect);
+
+/* =========================
+   Smooth Page Fade-in
+========================= */
+
+document.body.style.opacity = 0;
+
+window.addEventListener("load", () => {
+  document.body.style.transition = "opacity 0.8s ease";
+  document.body.style.opacity = 1;
 });
