@@ -9,9 +9,9 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" type="image/png" href="assets/icons/logo.png" />
 
-  <!-- Intro Animation Styles -->
+  <!-- Cinematic Intro Styles -->
   <style>
-    /* Intro overlay */
+    /* Full-screen intro overlay */
     .intro {
       position: fixed;
       top: 0;
@@ -22,8 +22,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      z-index: 9999;
       flex-direction: column;
+      z-index: 9999;
       overflow: hidden;
     }
 
@@ -36,7 +36,32 @@
       z-index: 1;
     }
 
-    /* Logo/text animation */
+    /* Light streaks / lens flare */
+    .light-streaks {
+      position: absolute;
+      top: 0;
+      left: -50%;
+      width: 200%;
+      height: 100%;
+      background: linear-gradient(
+        120deg,
+        rgba(255,255,255,0.0) 0%,
+        rgba(255,255,255,0.2) 50%,
+        rgba(255,255,255,0.0) 100%
+      );
+      filter: blur(20px);
+      transform: skewX(-25deg);
+      animation: streakMove 2s infinite linear;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    @keyframes streakMove {
+      0% { transform: translateX(-100%) skewX(-25deg); }
+      100% { transform: translateX(100%) skewX(-25deg); }
+    }
+
+    /* Intro text animations */
     .intro h1 {
       color: #fff;
       font-size: 3em;
@@ -46,7 +71,6 @@
       animation: fadeZoom 2s forwards;
     }
 
-    /* Subtitle / tagline animation */
     .intro p {
       color: #ccc;
       font-size: 1.2em;
@@ -69,11 +93,14 @@
 </head>
 <body>
 
-  <!-- ===== Intro Animation ===== -->
+  <!-- ===== Cinematic Intro ===== -->
   <div class="intro">
     <div id="particles-js"></div>
+    <div class="light-streaks"></div>
     <h1>Aju Krishna.B</h1>
     <p>Crafting Interactive Digital Experiences</p>
+    <!-- Optional cinematic swoosh sound -->
+    <audio id="swoosh" src="assets/audio/swoosh.mp3" autoplay></audio>
   </div>
 
   <!-- ===== Navbar ===== -->
@@ -131,13 +158,11 @@
     <p>© 2026 Aju Krishna. All Rights Reserved.</p>
   </footer>
 
-  <!-- JS -->
+  <!-- ===== JS ===== -->
   <script src="js/script.js"></script>
-
-  <!-- ===== Particles.js Library ===== -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
-  <!-- Intro Animation JS -->
+  <!-- ===== Cinematic Intro JS ===== -->
   <script>
     // Initialize Particles.js
     particlesJS("particles-js", {
@@ -164,6 +189,8 @@
     // Fade out intro after 3.5s
     window.addEventListener('load', () => {
       const intro = document.querySelector('.intro');
+      const swoosh = document.getElementById('swoosh');
+      if (swoosh) swoosh.play();
       setTimeout(() => {
         intro.style.opacity = '0';
         intro.style.transition = 'opacity 0.8s ease';
@@ -173,6 +200,5 @@
       }, 4300);
     });
   </script>
-
 </body>
 </html>
