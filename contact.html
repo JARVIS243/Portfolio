@@ -4,10 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact | Aju Krishna</title>
+
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" type="image/png" href="assets/icons/logo.png" />
 </head>
 <body>
+
+  <!-- ===== Navbar ===== -->
   <header>
     <nav class="navbar">
       <div class="logo">Aju Krishna B</div>
@@ -21,65 +24,72 @@
     </nav>
   </header>
 
+  <!-- ===== Contact Section ===== -->
   <main class="contact-section">
     <h1 class="typewriter">Get in Touch</h1>
-    <p>If you’d like to work together or just want to say hi, feel free to message me!</p>
+    <p>
+      Have a project in mind, want to collaborate, or just say hi?
+      My inbox is always open 🙂
+    </p>
 
-    <form action="https://formspree.io/f/mqalavvr" method="POST" class="contact-form">
+    <!-- Contact Form -->
+    <form
+      id="contactForm"
+      action="https://formspree.io/f/mqalavvr"
+      method="POST"
+      class="contact-form"
+    >
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+
       <button type="submit" class="btn">Send Message</button>
-      <p class="form-message" id="formMessage" style="display:none; color: green;">✅ Message sent successfully!</p>
     </form>
 
+    <!-- Social Links -->
     <div class="social-links">
       <h3>Connect with me</h3>
       <div class="social-icons">
-        <a href="https://github.com/JARVIS243" target="_blank"><img src="assets/icons/github.png" alt="GitHub" class="icon" /></a>
-        <a href="https://www.instagram.com/aaram.thamburan__/#" target="_blank"><img src="assets/icons/instagram.png" alt="Instagram" class="icon" /></a>
-        <a href="mailto:ajukrishnaaju06@gmail.com"><img src="assets/icons/email.png" alt="Email" class="icon" /></a>
+        <a href="https://github.com/JARVIS243" target="_blank" rel="noopener">
+          <img src="assets/icons/github.png" alt="GitHub" class="icon" />
+        </a>
+
+        <a href="https://www.instagram.com/aaram.thamburan__/" target="_blank" rel="noopener">
+          <img src="assets/icons/instagram.png" alt="Instagram" class="icon" />
+        </a>
+
+        <a href="mailto:ajukrishnaaju06@gmail.com">
+          <img src="assets/icons/email.png" alt="Email" class="icon" />
+        </a>
       </div>
     </div>
 
+    <!-- Quick Contact -->
     <div class="quick-contact">
       <a href="tel:+917736188367" class="btn">📞 Call Me</a>
-      <a href="https://wa.me/917736188367" class="btn" target="_blank">💬 WhatsApp</a>
+      <a href="https://wa.me/917736188367" class="btn" target="_blank" rel="noopener">
+        💬 WhatsApp
+      </a>
     </div>
 
+    <!-- Map -->
     <div class="map-container">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2999.6442891383185!2d76.56700677353103!3d9.244783985576957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b06190064136283%3A0xe70e6b7d5425ec79!2sBiju%20Bhavanam!5e1!3m2!1sen!2sin!4v1752902117946!5m2!1sen!2sin"
-        width="600" height="300" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy"
+        width="100%"
+        height="300"
+        style="border:0; border-radius:12px;"
+        allowfullscreen
+        loading="lazy"
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </div>
   </main>
 
+  <!-- ===== Footer ===== -->
   <footer>
-    <p>&copy; 2025 Aju Krishna. All rights reserved.</p>
+    <p>&copy; 2026 Aju Krishna. All rights reserved.</p>
   </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const form = document.getElementById("contactForm");
-      const message = document.getElementById("formMessage");
-      const themeToggle = document.getElementById("themeToggle");
-
-      if (form && message) {
-        form.addEventListener("submit", function (e) {
-          e.preventDefault();
-          message.style.display = "block";
-          form.reset();
-        });
-      }
-
-      if (themeToggle) {
-        themeToggle.addEventListener("click", function () {
-          document.body.classList.toggle("dark-theme");
-        });
-      }
-    });
-  </script>
 </body>
 </html>
