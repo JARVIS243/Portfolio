@@ -3,37 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Resume | Aju Krishna</title>
+  <title>Resume | Aju Krishna B</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/icons/logo.png" />
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">Aju Krishna B</div>
+
+  <!-- ===== Navbar ===== -->
+  <header class="navbar">
+    <div class="logo">Aju<span>.</span></div>
+    <nav>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="about.html">About Me</a></li>
         <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
         <li><a href="resume.html" class="active">Resume</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- ===== Resume Section ===== -->
   <main class="resume-section">
-    <h1>My Resume</h1>
-    <div class="resume-container">
-      <iframe src="assets/resume.pdf" frameborder="0" width="100%" height="600px"></iframe>
-      <div class="resume-actions">
-        <a href="assets/" download class="btn">Download Resume</a>
-      </div>
+    <h1>My <span>Resume</span></h1>
+    <p class="resume-intro">
+      You can view my resume below or download a copy for offline reference.
+    </p>
+
+    <div class="resume-actions">
+      <a href="assets/resume.pdf" class="btn primary" download>
+        Download Resume
+      </a>
+      <a href="assets/resume.pdf" class="btn secondary" target="_blank" rel="noopener noreferrer">
+        View Fullscreen
+      </a>
+    </div>
+
+    <!-- Resume Preview -->
+    <div class="resume-preview">
+      <iframe
+        src="assets/resume.pdf"
+        title="Aju Krishna Resume"
+        loading="lazy">
+      </iframe>
     </div>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Aju Krishna. All rights reserved.</p>
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <p>© 2025 Aju Krishna B. All Rights Reserved.</p>
   </footer>
+
 </body>
 </html>
-
