@@ -7,8 +7,6 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css" />
-
-  <!-- Icons -->
   <link rel="icon" type="image/png" href="assets/icons/logo.png" />
 
   <!-- Intro Animation Styles -->
@@ -26,12 +24,23 @@
       align-items: center;
       z-index: 9999;
       flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Particles container */
+    #particles-js {
+      position: absolute;
+      top:0; left:0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
     }
 
     /* Logo/text animation */
     .intro h1 {
       color: #fff;
       font-size: 3em;
+      z-index: 2;
       opacity: 0;
       transform: scale(0.8);
       animation: fadeZoom 2s forwards;
@@ -42,13 +51,13 @@
       color: #ccc;
       font-size: 1.2em;
       margin-top: 10px;
+      z-index: 2;
       opacity: 0;
       transform: translateY(20px);
       animation: slideUp 2s forwards;
       animation-delay: 1s;
     }
 
-    /* Keyframes */
     @keyframes fadeZoom {
       to { opacity: 1; transform: scale(1); }
     }
@@ -62,6 +71,7 @@
 
   <!-- ===== Intro Animation ===== -->
   <div class="intro">
+    <div id="particles-js"></div>
     <h1>Aju Krishna.B</h1>
     <p>Crafting Interactive Digital Experiences</p>
   </div>
@@ -70,7 +80,6 @@
   <header>
     <nav class="navbar">
       <div class="logo">Aju Krishna.B</div>
-
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -91,13 +100,11 @@
         Passionate about building clean, interactive, and meaningful digital
         experiences. I love turning ideas into real-world projects.
       </p>
-
       <div class="hero-buttons">
         <a href="projects.html" class="btn primary">View Projects</a>
         <a href="assets/resume.pdf" class="btn secondary" download>Download Resume</a>
       </div>
     </div>
-
     <div class="hero-image">
       <img src="assets/images/profile.png" alt="Aju Krishna" />
     </div>
@@ -127,18 +134,45 @@
   <!-- JS -->
   <script src="js/script.js"></script>
 
+  <!-- ===== Particles.js Library ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
   <!-- Intro Animation JS -->
   <script>
+    // Initialize Particles.js
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 50 },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.5 },
+        "size": { "value": 3 },
+        "line_linked": { "enable": true, "distance": 120, "color": "#ffffff", "opacity": 0.2, "width": 1 },
+        "move": { "enable": true, "speed": 2 }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": true, "mode": "push" }
+        },
+        "modes": { "repulse": { "distance": 100 }, "push": { "particles_nb": 4 } }
+      },
+      "retina_detect": true
+    });
+
+    // Fade out intro after 3.5s
     window.addEventListener('load', () => {
       const intro = document.querySelector('.intro');
       setTimeout(() => {
         intro.style.opacity = '0';
         intro.style.transition = 'opacity 0.8s ease';
-      }, 3000); // display for 3s
+      }, 3500);
       setTimeout(() => {
         intro.style.display = 'none';
-      }, 3800);
+      }, 4300);
     });
   </script>
+
 </body>
 </html>
