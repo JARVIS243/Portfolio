@@ -2,56 +2,108 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Skills | Aju Krishna B</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills | Aju Krishna</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" type="image/png" href="assets/icons/logo.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/icons/favicon.png" />
 </head>
 <body>
 
-  <!-- Navbar -->
+  <!-- ===== Navbar ===== -->
   <header class="navbar">
-    <div class="logo">Aju Krishna.B</div>
+    <div class="logo">Aju<span>.</span></div>
     <nav>
-      <ul class="nav-links">
+      <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
+        <li><a href="skills.html" class="active">Skills</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="resume.html">Resume</a></li>
-        <li><a class="active" href="skills.html">Skills</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Skills Section -->
-  <section class="skills-section skills-page">
-    <h1>My Skills</h1>
-    <p>Here are the technologies and tools I work with:</p>
+  <!-- ===== Skills Section ===== -->
+  <section class="hero" style="min-height:auto; padding-top:60px;">
+    <div class="hero-content">
+      <h1>My <span>Skills</span></h1>
+      <p>
+        These are the technologies and tools I work with regularly.
+        I focus on building clean, responsive, and user-friendly applications.
+      </p>
 
-    <div class="skills-grid">
-      <div class="skill">HTML</div>
-      <div class="skill">CSS</div>
-      <div class="skill">JavaScript</div>
-      <div class="skill">React</div>
-      <div class="skill">Node.js</div>
-      <div class="skill">Python</div>
-      <div class="skill">C/C++</div>
-      <div class="skill">MySQL</div>
-      <div class="skill">Supabase</div>
-      <div class="skill">Git & GitHub</div>
-      <div class="skill">Figma</div>
-      <div class="skill">Firebase</div>
-      <div class="skill">Tailwind CSS</div>
-      <div class="skill">Bootstrap</div>
-      <div class="skill">Linux</div>
+      <!-- Skill Bars -->
+      <div class="skills">
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>HTML</span>
+            <span>90%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width:90%"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>CSS</span>
+            <span>85%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width:85%"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>JavaScript</span>
+            <span>75%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width:75%"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>Git & GitHub</span>
+            <span>70%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width:70%"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>Responsive Design</span>
+            <span>85%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width:85%"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="assets/images/profile.png" alt="Skills Illustration" />
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Aju Krishna.B | All rights reserved</p>
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <p>© 2026 Aju Krishna. All Rights Reserved.</p>
   </footer>
 
+  <!-- JS -->
+  <script src="js/script.js"></script>
 </body>
 </html>
