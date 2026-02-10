@@ -6,36 +6,87 @@
   <title>Aju Krishna | Portfolio</title>
 
   <!-- CSS -->
-<link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css" />
 
-  <!-- Icons (optional – works if you add icons later) -->
- <link rel="icon" type="image/png" href="assets/icons/logo.png" />
+  <!-- Icons -->
+  <link rel="icon" type="image/png" href="assets/icons/logo.png" />
+
+  <!-- Intro Animation Styles -->
+  <style>
+    /* Intro overlay */
+    .intro {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #0a0a0a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      flex-direction: column;
+    }
+
+    /* Logo/text animation */
+    .intro h1 {
+      color: #fff;
+      font-size: 3em;
+      opacity: 0;
+      transform: scale(0.8);
+      animation: fadeZoom 2s forwards;
+    }
+
+    /* Subtitle / tagline animation */
+    .intro p {
+      color: #ccc;
+      font-size: 1.2em;
+      margin-top: 10px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideUp 2s forwards;
+      animation-delay: 1s;
+    }
+
+    /* Keyframes */
+    @keyframes fadeZoom {
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes slideUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- ===== Navbar ===== -->
-<header>
-  <nav class="navbar">
-    <div class="logo">Aju Krishna.B</div>
+  <!-- ===== Intro Animation ===== -->
+  <div class="intro">
+    <h1>Aju Krishna.B</h1>
+    <p>Crafting Interactive Digital Experiences</p>
+  </div>
 
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- ===== Navbar ===== -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Aju Krishna.B</div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- ===== Hero Section ===== -->
   <section class="hero">
     <div class="hero-content">
       <h1>Hi, I'm <span>Aju Krishna</span></h1>
-      <h2>
-        I'm a <span class="typing-text"></span>
-      </h2>
+      <h2>I'm a <span class="typing-text"></span></h2>
       <p>
         Passionate about building clean, interactive, and meaningful digital
         experiences. I love turning ideas into real-world projects.
@@ -75,10 +126,19 @@
 
   <!-- JS -->
   <script src="js/script.js"></script>
+
+  <!-- Intro Animation JS -->
+  <script>
+    window.addEventListener('load', () => {
+      const intro = document.querySelector('.intro');
+      setTimeout(() => {
+        intro.style.opacity = '0';
+        intro.style.transition = 'opacity 0.8s ease';
+      }, 3000); // display for 3s
+      setTimeout(() => {
+        intro.style.display = 'none';
+      }, 3800);
+    });
+  </script>
 </body>
 </html>
-
-
-
-
-
