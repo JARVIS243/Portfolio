@@ -1,104 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact | Aju Krishna</title>
-
- <link rel="stylesheet" href="css/style.css" />
-
-  <link rel="icon" type="image/png" href="assets/icons/logo.png" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Aju Krishna B</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- ===== Navbar ===== -->
-<header>
-  <nav class="navbar">
-    <div class="logo">Aju Krishna.B</div>
+<div class="lamp-glow" aria-hidden="true"></div>
 
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+<header class="nav">
+  <a class="nav__brand" href="index.html">AK<span class="dot">.</span></a>
+  <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="nav__links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html"><img class="nav__icon" src="assets/icons/about.png" alt="">About</a>
+    <a href="skills.html"><img class="nav__icon" src="assets/icons/skills.png" alt="">Skills</a>
+    <a href="projects.html"><img class="nav__icon" src="assets/icons/projects.png" alt="">Projects</a>
+    <a href="resume.html"><img class="nav__icon" src="assets/icons/resume.png" alt="">Resume</a>
+    <a href="contact.html" class="nav__cta is-active">Contact</a>
   </nav>
 </header>
 
-  <!-- ===== Contact Section ===== -->
-  <main class="contact-section">
-    <h1 class="typewriter">Get in Touch</h1>
-    <p>
-      Have a project in mind, want to collaborate, or just say hi?
-      My inbox is always open 🙂
-    </p>
+<main>
+  <div class="page-header">
+    <img class="page-header__icon" src="assets/icons/contact.png" alt="">
+    <h1 class="page-header__title">Get in <span>Touch</span></h1>
+  </div>
 
-    <!-- Contact Form -->
-    <form
-      id="contactForm"
-      action="https://formspree.io/f/mqalavvr"
-      method="POST"
-      class="contact-form"
-    >
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+  <section class="section section--contact" style="border-top:none;">
+    <p class="section__sub">Have a project, an opportunity, or just want to say hi? My inbox is open.</p>
 
-      <button type="submit" class="btn">Send Message</button>
-    </form>
+    <div class="contact-grid" style="margin-top:36px;">
+      <form class="contact-form" id="contactForm" action="https://formspree.io/f/mqpzagpj" method="POST">
+        <label>
+          Name
+          <input type="text" name="name" placeholder="Your name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="5" placeholder="What's on your mind?" required></textarea>
+        </label>
+        <button type="submit" class="btn btn--primary">Send message</button>
+        <p class="contact-form__note" id="formNote" role="status"></p>
+      </form>
 
-    <!-- Social Links -->
-    <div class="social-links">
-      <h3>Connect with me</h3>
-      <div class="social-icons">
-        <a href="https://github.com/Karnan20" target="_blank" rel="noopener">
-          <img src="assets/icons/github.png" alt="GitHub" class="icon" />
-        </a>
-
-        <a href="https://www.instagram.com/aaram.thampuran__/" target="_blank" rel="noopener">
-          <img src="assets/icons/instagram.png" alt="Instagram" class="icon" />
-        </a>
-
-        <a href="mailto:ajukrishnaaju06@gmail.com">
-          <img src="assets/icons/email.png" alt="Email" class="icon" />
-        </a>
+      <div class="contact-side">
+        <p class="contact-side__label">Reach me directly</p>
+        <a class="contact-side__item" href="mailto:you@example.com">you@example.com</a>
+        <div class="contact-side__socials">
+          <a href="#" aria-label="GitHub"><img src="assets/icons/github.png" alt="GitHub"></a>
+          <a href="#" aria-label="Instagram"><img src="assets/icons/instagram.png" alt="Instagram"></a>
+          <a href="mailto:you@example.com" aria-label="Email"><img src="assets/icons/email.png" alt="Email"></a>
+          <a href="#" aria-label="Call"><img src="assets/icons/contact.png" alt="Call"></a>
+        </div>
       </div>
     </div>
+  </section>
+</main>
 
-    <!-- Quick Contact -->
-    <div class="quick-contact">
-      <a href="tel:+917736188367" class="btn">📞 Call Me</a>
-      <a href="https://wa.me/917736188367" class="btn" target="_blank" rel="noopener">
-        💬 WhatsApp
-      </a>
-    </div>
+<footer class="footer">
+  <p>© <span id="year"></span> Aju Krishna B. Built while learning.</p>
+  <a href="index.html">Back to top ↑</a>
+</footer>
 
-    <!-- Map -->
-    <div class="map-container">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2999.6442891383185!2d76.56700677353103!3d9.244783985576957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b06190064136283%3A0xe70e6b7d5425ec79!2sBiju%20Bhavanam!5e1!3m2!1sen!2sin!4v1752902117946!5m2!1sen!2sin"
-        width="100%"
-        height="300"
-        style="border:0; border-radius:12px;"
-        allowfullscreen
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-  </main>
-
-  <!-- ===== Footer ===== -->
-  <footer>
-    <p>&copy; 2026 Aju Krishna. All rights reserved.</p>
-  </footer>
-
+<script src="js/script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
