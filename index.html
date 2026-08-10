@@ -1,204 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aju Krishna | Portfolio</title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" type="image/png" href="assets/icons/logo.png" />
-
-  <!-- Cinematic Intro Styles -->
-  <style>
-    /* Full-screen intro overlay */
-    .intro {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #0a0a0a;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      z-index: 9999;
-      overflow: hidden;
-    }
-
-    /* Particles container */
-    #particles-js {
-      position: absolute;
-      top:0; left:0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-    }
-
-    /* Light streaks / lens flare */
-    .light-streaks {
-      position: absolute;
-      top: 0;
-      left: -50%;
-      width: 200%;
-      height: 100%;
-      background: linear-gradient(
-        120deg,
-        rgba(255,255,255,0.0) 0%,
-        rgba(255,255,255,0.2) 50%,
-        rgba(255,255,255,0.0) 100%
-      );
-      filter: blur(20px);
-      transform: skewX(-25deg);
-      animation: streakMove 2s infinite linear;
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    @keyframes streakMove {
-      0% { transform: translateX(-100%) skewX(-25deg); }
-      100% { transform: translateX(100%) skewX(-25deg); }
-    }
-
-    /* Intro text animations */
-    .intro h1 {
-      color: #fff;
-      font-size: 3em;
-      z-index: 2;
-      opacity: 0;
-      transform: scale(0.8);
-      animation: fadeZoom 2s forwards;
-    }
-
-    .intro p {
-      color: #ccc;
-      font-size: 1.2em;
-      margin-top: 10px;
-      z-index: 2;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: slideUp 2s forwards;
-      animation-delay: 1s;
-    }
-
-    @keyframes fadeZoom {
-      to { opacity: 1; transform: scale(1); }
-    }
-
-    @keyframes slideUp {
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aju Krishna B | Portfolio</title>
+<meta name="description" content="Portfolio of a student and self-taught developer — projects, skills, and notes from the learning journey.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- ===== Cinematic Intro ===== -->
-  <div class="intro">
-    <div id="particles-js"></div>
-    <div class="light-streaks"></div>
-    <h1>Aju Krishna.B</h1>
-    <p>Crafting Interactive Digital Experiences</p>
-    <!-- Optional cinematic swoosh sound -->
-    <audio id="swoosh" src="assets/audio/swoosh.mp3" autoplay></audio>
-  </div>
+<div class="lamp-glow" aria-hidden="true"></div>
 
-  <!-- ===== Navbar ===== -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">Aju Krishna.B</div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header class="nav">
+  <a class="nav__brand" href="index.html">AK<span class="dot">.</span></a>
+  <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="nav__links" id="navLinks">
+    <a href="index.html" class="is-active">Home</a>
+    <a href="about.html"><img class="nav__icon" src="assets/icons/about.png" alt="">About</a>
+    <a href="skills.html"><img class="nav__icon" src="assets/icons/skills.png" alt="">Skills</a>
+    <a href="projects.html"><img class="nav__icon" src="assets/icons/projects.png" alt="">Projects</a>
+    <a href="resume.html"><img class="nav__icon" src="assets/icons/resume.png" alt="">Resume</a>
+    <a href="contact.html" class="nav__cta">Contact</a>
+  </nav>
+</header>
 
-  <!-- ===== Hero Section ===== -->
+<main>
   <section class="hero">
-    <div class="hero-content">
-      <h1>Hi, I'm <span>Aju Krishna</span></h1>
-      <h2>I'm a <span class="typing-text"></span></h2>
-      <p>
-        Passionate about building clean, interactive, and meaningful digital
-        experiences. I love turning ideas into real-world projects.
+    <div class="hero__content">
+      <p class="eyebrow">// currently learning, currently building</p>
+      <h1 class="hero__title">
+        <span class="hero__hi">Hi, I'm</span>
+        Aju Krishna B
+      </h1>
+      <p class="hero__role"><span class="type-cursor" id="typedRole">Student &amp; Aspiring Developer</span></p>
+      <p class="hero__desc">
+        I turn late nights and half-finished tutorials into real, working things.
+        This is a running log of what I've built while learning to build.
       </p>
-      <div class="hero-buttons">
-        <a href="projects.html" class="btn primary">View Projects</a>
-        <a href="assets/resume.pdf" class="btn secondary" download>Download Resume</a>
+      <div class="hero__actions">
+        <a href="projects.html" class="btn btn--primary">View Projects</a>
+        <a href="assets/resume.pdf" class="btn btn--ghost" download>Download Resume</a>
       </div>
+
+      <dl class="stat-strip">
+        <div class="stat-strip__item">
+          <dt>Projects shipped</dt>
+          <dd>12+</dd>
+        </div>
+        <div class="stat-strip__item">
+          <dt>Months of learning</dt>
+          <dd>18</dd>
+        </div>
+        <div class="stat-strip__item">
+          <dt>Cups of coffee</dt>
+          <dd>∞</dd>
+        </div>
+      </dl>
     </div>
-    <div class="hero-image">
-      <img src="assets/images/profile.png" alt="Aju Krishna" />
+
+    <div class="hero__portrait">
+      <img src="assets/images/profile.png" alt="Portrait of Aju Krishna B">
     </div>
   </section>
+</main>
 
-  <!-- ===== Quick Stats ===== -->
-  <section class="stats">
-    <div class="stat">
-      <h3>16+</h3>
-      <p>Projects</p>
-    </div>
-    <div class="stat">
-      <h3>2+</h3>
-      <p>Years Learning</p>
-    </div>
-    <div class="stat">
-      <h3>100%</h3>
-      <p>Passion</p>
-    </div>
-  </section>
+<footer class="footer">
+  <p>© <span id="year"></span> Aju Krishna B. Built while learning.</p>
+  <a href="index.html">Back to top ↑</a>
+</footer>
 
-  <!-- ===== Footer ===== -->
-  <footer class="footer">
-    <p>© 2026 Aju Krishna. All Rights Reserved.</p>
-  </footer>
-
-  <!-- ===== JS ===== -->
-  <script src="js/script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
-  <!-- ===== Cinematic Intro JS ===== -->
-  <script>
-    // Initialize Particles.js
-    particlesJS("particles-js", {
-      "particles": {
-        "number": { "value": 50 },
-        "color": { "value": "#ffffff" },
-        "shape": { "type": "circle" },
-        "opacity": { "value": 0.5 },
-        "size": { "value": 3 },
-        "line_linked": { "enable": true, "distance": 120, "color": "#ffffff", "opacity": 0.2, "width": 1 },
-        "move": { "enable": true, "speed": 2 }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-          "onhover": { "enable": true, "mode": "repulse" },
-          "onclick": { "enable": true, "mode": "push" }
-        },
-        "modes": { "repulse": { "distance": 100 }, "push": { "particles_nb": 4 } }
-      },
-      "retina_detect": true
-    });
-
-    // Fade out intro after 3.5s
-    window.addEventListener('load', () => {
-      const intro = document.querySelector('.intro');
-      const swoosh = document.getElementById('swoosh');
-      if (swoosh) swoosh.play();
-      setTimeout(() => {
-        intro.style.opacity = '0';
-        intro.style.transition = 'opacity 0.8s ease';
-      }, 3500);
-      setTimeout(() => {
-        intro.style.display = 'none';
-      }, 4300);
-    });
-  </script>
+<script src="js/script.js"></script>
 </body>
 </html>
