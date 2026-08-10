@@ -1,84 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Me | Aju Krishna</title>
-
-  <!-- CSS -->
- <link rel="stylesheet" href="css/style.css" />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/icons/logo.png" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Aju Krishna B</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- ===== Navbar ===== -->
-  <header>
-  <nav class="navbar">
-    <div class="logo">Aju Krishna.B</div>
+<div class="lamp-glow" aria-hidden="true"></div>
 
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+<header class="nav">
+  <a class="nav__brand" href="index.html">AK<span class="dot">.</span></a>
+  <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="nav__links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="is-active"><img class="nav__icon" src="assets/icons/about.png" alt="">About</a>
+    <a href="skills.html"><img class="nav__icon" src="assets/icons/skills.png" alt="">Skills</a>
+    <a href="projects.html"><img class="nav__icon" src="assets/icons/projects.png" alt="">Projects</a>
+    <a href="resume.html"><img class="nav__icon" src="assets/icons/resume.png" alt="">Resume</a>
+    <a href="contact.html" class="nav__cta">Contact</a>
   </nav>
 </header>
 
+<main>
+  <div class="page-header">
+    <img class="page-header__icon" src="assets/icons/about.png" alt="">
+    <h1 class="page-header__title">About <span>Me</span></h1>
+  </div>
 
-  <!-- ===== About Section ===== -->
-  <section class="hero" style="min-height: auto; padding-top: 60px;">
-    <div class="hero-content">
-      <h1>About <span>Me</span></h1>
-
-      <p>
-        I’m <strong>Aju Krishna</strong>, a passionate and self-driven web developer
-        who loves building clean, modern, and user-friendly digital experiences.
-        I enjoy turning ideas into real projects using simple yet powerful
-        technologies.
-      </p>
-
-      <p>
-        My journey started with curiosity about how websites work, and that
-        curiosity quickly turned into a deep interest in frontend development.
-        I focus on writing clean code, learning new tools, and constantly
-        improving my skills.
-      </p>
-
-      <p>
-        Beyond coding, I enjoy exploring creative ideas, learning new tech,
-        and working on personal projects that challenge me to grow.
-        I believe consistency and passion are the keys to success.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="projects.html" class="btn primary">View My Work</a>
-        <a href="contact.html" class="btn secondary">Contact Me</a>
+  <section class="section" style="border-top:none;">
+    <div class="about">
+      <div class="about__intro">
+        <img class="about__photo" src="assets/images/about-profile.png" alt="Your Name">
+        <h2 class="section__title">Still early. Still building.</h2>
+      </div>
+      <div class="about__body">
+        <p>
+          I'm a student learning web development by actually shipping things —
+          not just following along. I'd rather have a rough project that works
+          than a perfect plan that doesn't exist yet.
+        </p>
+        <p>
+          Most of what's on this site started as "I wonder if I can build that."
+          I care about writing code I can explain, and about getting a little
+          better with every project.
+        </p>
+        <p>
+          When I'm not at the keyboard, I'm usually reading about whatever broke
+          last time — that's normally where the real learning happens.
+        </p>
+        <div class="hero__actions" style="margin-top:32px;">
+          <a href="projects.html" class="btn btn--primary">View My Work</a>
+          <a href="contact.html" class="btn btn--ghost">Contact Me</a>
+        </div>
       </div>
     </div>
-
-    <div class="hero-image">
-      <img src="assets/images/about-profile.png" alt="Aju Krishna" />
-    </div>
   </section>
+</main>
 
-  <!-- ===== Footer ===== -->
-  <footer class="footer">
-    <p>© 2026 Aju Krishna. All Rights Reserved.</p>
-  </footer>
+<footer class="footer">
+  <p>© <span id="year"></span> Aju Krishna B. Built while learning.</p>
+  <a href="index.html">Back to top ↑</a>
+</footer>
 
-  <!-- JS -->
-  <script src="js/script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
