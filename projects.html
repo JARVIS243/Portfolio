@@ -1,227 +1,523 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projects | Aju Krishna B</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Aju Krishna.B</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="lamp-glow" aria-hidden="true"></div>
 
-<link rel="stylesheet" href="css/style.css" />
+    <header class="nav">
+      <a class="nav__brand" href="index.html">AK<span class="dot">.</span></a>
+      <button
+        class="nav__toggle"
+        id="navToggle"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav__links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html"
+          ><img class="nav__icon" src="assets/icons/about.png" alt="" />About</a
+        >
+        <a href="skills.html"
+          ><img
+            class="nav__icon"
+            src="assets/icons/skills.png"
+            alt=""
+          />Skills</a
+        >
+        <a href="projects.html" class="is-active"
+          ><img
+            class="nav__icon"
+            src="assets/icons/projects.png"
+            alt=""
+          />Projects</a
+        >
+        <a href="resume.html"
+          ><img
+            class="nav__icon"
+            src="assets/icons/resume.png"
+            alt=""
+          />Resume</a
+        >
+        <a href="contact.html" class="nav__cta">Contact</a>
+      </nav>
+    </header>
 
-  <link rel="icon" type="image/png" href="assets/icons/logo.png" />
-</head>
-<body>
-
-  <!-- ===== Navbar ===== -->
-<header>
-  <nav class="navbar">
-    <div class="logo">Aju Krishna.B</div>
-
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-  <!-- ===== Projects Section ===== -->
-  <main class="projects-section">
-    <h1>My <span>Projects</span></h1>
-    <p class="projects-intro">
-      A collection of projects I’ve built while learning, experimenting,
-      and solving real-world problems.
-    </p>
-
-    <div class="projects-grid">
-
-      <!-- Project Card -->
-      <div class="project-card">
-        <img src="assets/images/project1.png" alt="StudyPanda project preview" loading="lazy">
-        <h3>StudyPanda</h3>
-        <p>AI-powered study assistant for students.</p>
-        <a href="https://studypanda.streamlit.app/" class="btn primary" target="_blank" rel="noopener noreferrer">
-          Live Demo
-        </a>
+    <main>
+      <div class="page-header">
+        <img class="page-header__icon" src="assets/icons/projects.png" alt="" />
+        <h1 class="page-header__title">My <span>Projects</span></h1>
       </div>
 
-      <div class="project-card">
-        <img src="assets/images/project2.png" alt="Attendix project preview" loading="lazy">
-        <h3>Attendix</h3>
-        <p>Smart attendance tracking system.</p>
-        <a href="https://attendixweb.streamlit.app/" class="btn primary" target="_blank" rel="noopener noreferrer">
-          Live Demo
-        </a>
-      </div>
+      <section class="section" style="border-top: none">
+        <p class="section__sub">
+          A mix of course projects, weekend builds, and things I just wanted to
+          exist.
+        </p>
 
-      <div class="project-card">
-        <img src="assets/images/project3.png" alt="Pachakapura project preview" loading="lazy">
-        <h3>Pachakapura</h3>
-        <p>Recipe & cooking assistant platform.</p>
-        <a href="https://pachakapura.streamlit.app/" class="btn primary" target="_blank" rel="noopener noreferrer">
-          Live Demo
-        </a>
-      </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-card__thumb">
+              <img
+                src="assets/images/project1.png"
+                alt="StudyPanda preview"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-card__body">
+              <h3>StudyPanda</h3>
+              <p>AI-powered study assistant for students.</p>
+              <div class="project-card__tags">
+                <span>AI</span><span>Python</span><span>Streamlit</span>
+              </div>
+              <a
+                href="https://studypanda.streamlit.app/"
+                class="btn btn--card"
+                target="_blank"
+                >Live Demo</a
+              >
+            </div>
+          </article>
 
-      <div class="project-card">
-        <img src="assets/images/project4.png" alt="Varthanow project preview" loading="lazy">
-        <h3>Varthanow</h3>
-        <p>News aggregation and reading platform.</p>
-        <a href="https://varthanow.streamlit.app/" class="btn primary" target="_blank" rel="noopener noreferrer">
-          Live Demo
-        </a>
-      </div>
+          <article class="project-card">
+            <div class="project-card__thumb">
+              <img
+                src="assets/images/project2.png"
+                alt="Attendix preview"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-card__body">
+              <h3>Attendix</h3>
+              <p>Smart attendance tracking system.</p>
+              <div class="project-card__tags">
+                <span>Python</span><span>Streamlit</span><span>Database</span>
+              </div>
+              <a
+                href="https://attendixweb.streamlit.app/"
+                class="btn btn--card"
+                target="_blank"
+                >Live Demo</a
+              >
+            </div>
+          </article>
 
-      <div class="project-card">
-        <img src="assets/images/project5.png" alt="StudyMate AI Planner preview" loading="lazy">
-        <h3>StudyMate AI Planner</h3>
-        <p>AI-based study planning and productivity tool.</p>
-        <a href="https://studymate-aiplanner.streamlit.app/" class="btn primary" target="_blank" rel="noopener noreferrer">
-          Live Demo
-        </a>
-      </div>
+          <article class="project-card">
+            <div class="project-card__thumb">
+              <img
+                src="assets/images/project3.png"
+                alt="Pachakapura preview"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-card__body">
+              <h3>Pachakapura</h3>
+              <p>Recipe and cooking assistant platform.</p>
+              <div class="project-card__tags">
+                <span>Python</span><span>AI</span><span>Streamlit</span>
+              </div>
+              <a
+                href="https://pachakapura.streamlit.app/"
+                class="btn btn--card"
+                target="_blank"
+                >Live Demo</a
+              >
+            </div>
+          </article>
 
-      <div class="project-card">
-        <img src="assets/images/project6.png" alt="BudgetMate preview" loading="lazy">
-        <h3>BudgetMate</h3>
-        <p>Personal expense and budget tracker.</p>
-        <a href="https://mybudgetmate.streamlit.app/" class="btn primary" target="_blank" rel="noopener noreferrer">
-          Live Demo
-        </a>
-      </div>
+          <article class="project-card">
+            <div class="project-card__thumb">
+              <img
+                src="assets/images/project4.png"
+                alt="Varthanow preview"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-card__body">
+              <h3>Varthanow</h3>
+              <p>News aggregation and reading platform.</p>
+              <div class="project-card__tags">
+                <span>Python</span><span>API</span><span>Web</span>
+              </div>
+              <a
+                href="https://varthanow.streamlit.app/"
+                class="btn btn--card"
+                target="_blank"
+                >Live Demo</a
+              >
+            </div>
+          </article>
 
-      <div class="project-card">
-        <img src="assets/images/project7.png" alt="DevStart preview" loading="lazy">
-        <h3>DevStart</h3>
-        <p>Learning platform for beginner developers.</p>
-        <a href="https://devstart-learning.netlify.app/" class="btn primary" target="_blank" rel="noopener noreferrer">
-          Live Demo
-        </a>
-      </div>
+          <article class="project-card">
+            <div class="project-card__thumb">
+              <img
+                src="assets/images/project5.png"
+                alt="StudyMate AI Planner preview"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-card__body">
+              <h3>StudyMate AI Planner</h3>
+              <p>AI-based study planning and productivity tool.</p>
+              <div class="project-card__tags">
+                <span>AI</span><span>Python</span><span>Planner</span>
+              </div>
+              <a
+                href="https://studymate-aiplanner.streamlit.app/"
+                class="btn btn--card"
+                target="_blank"
+                >Live Demo</a
+              >
+            </div>
+          </article>
 
-      <div class="project-card">
-        <img src="assets/images/project8.png" alt="DevStart 2.0 preview" loading="lazy">
-        <h3>DevStart 2.0</h3>
-        <p>Improved version with modern UI & content.</p>
-        <a href="https://devstart2-o.netlify.app/" class="btn primary" target="_blank" rel="noopener noreferrer">
-          Live Demo
-        </a>
-      </div>
+          <article class="project-card">
+            <div class="project-card__thumb">
+              <img
+                src="assets/images/project6.png"
+                alt="BudgetMate preview"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-card__body">
+              <h3>BudgetMate</h3>
+              <p>Personal expense and budget tracker.</p>
+              <div class="project-card__tags">
+                <span>Python</span><span>Finance</span><span>SQLite</span>
+              </div>
+              <a
+                href="https://mybudgetmate.streamlit.app/"
+                class="btn btn--card"
+                target="_blank"
+                >Live Demo</a
+              >
+            </div>
+          </article>
 
-      <div class="project-card">
-        <img src="assets/images/project9.png" alt="Zenaura preview" loading="lazy">
-        <h3>Zenaura</h3>
-        <p>Minimal modern website concept.</p>
-        <a href="https://zenaura.netlify.app/" class="btn primary" target="_blank" rel="noopener noreferrer">
-          Live Demo
-        </a>
-      </div>
+          <article class="project-card">
+            <div class="project-card__thumb">
+              <img
+                src="assets/images/project7.png"
+                alt="DevStart preview"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-card__body">
+              <h3>DevStart</h3>
+              <p>Learning platform for beginner developers.</p>
+              <div class="project-card__tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <a
+                href="https://devstart-learning.netlify.app/"
+                class="btn btn--card"
+                target="_blank"
+                >Live Demo</a
+              >
+            </div>
+          </article>
 
-      <div class="project-card">
-        <img src="assets/images/project10.png" alt="FeelWrite preview" loading="lazy">
-        <h3>FeelWrite</h3>
-        <p>Emotion-based writing and journaling app.</p>
-        <a href="https://feelwrite.streamlit.app/" class="btn primary" target="_blank" rel="noopener noreferrer">
-          Live Demo
-        </a>
-      </div>
+          <article class="project-card">
+            <div class="project-card__thumb">
+              <img
+                src="assets/images/project8.png"
+                alt="DevStart 2.0 preview"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-card__body">
+              <h3>DevStart 2.0</h3>
+              <p>Improved version with modern UI and content.</p>
+              <div class="project-card__tags">
+                <span>Frontend</span><span>UI</span><span>Netlify</span>
+              </div>
+              <a
+                href="https://devstart2-o.netlify.app/"
+                class="btn btn--card"
+                target="_blank"
+                >Live Demo</a
+              >
+            </div>
+          </article>
 
-      <div class="project-card">
-        <img src="assets/images/project11.png" alt="LifeKey preview" loading="lazy">
-        <h3>LifeKey</h3>
-        <p>Daily life management and reminder system.</p>
-        <a href="https://lifekey.netlify.app/" class="btn primary" target="_blank" rel="noopener noreferrer">
-          Live Demo
-        </a>
-      </div>
+          <article class="project-card">
+            <div class="project-card__thumb">
+              <img
+                src="assets/images/project9.png"
+                alt="Zenaura preview"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-card__body">
+              <h3>Zenaura</h3>
+              <p>Minimal modern website concept.</p>
+              <div class="project-card__tags">
+                <span>HTML</span><span>CSS</span><span>Design</span>
+              </div>
+              <a
+                href="https://zenaura.netlify.app/"
+                class="btn btn--card"
+                target="_blank"
+                >Live Demo</a
+              >
+            </div>
+          </article>
 
-      <div class="project-card">
-        <img src="assets/images/project12.png" alt="SmartShelf preview" loading="lazy">
-        <h3>SmartShelf</h3>
-        <p>Book & resource management system.</p>
-        <a href="https://smartshelf-org.netlify.app/" class="btn primary" target="_blank" rel="noopener noreferrer">
-          Live Demo
-        </a>
-      </div>
+          <article class="project-card">
+            <div class="project-card__thumb">
+              <img
+                src="assets/images/project10.png"
+                alt="FeelWrite preview"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-card__body">
+              <h3>FeelWrite</h3>
+              <p>Emotion-based writing and journaling app.</p>
+              <div class="project-card__tags">
+                <span>Python</span><span>Streamlit</span><span>AI</span>
+              </div>
+              <a
+                href="https://feelwrite.streamlit.app/"
+                class="btn btn--card"
+                target="_blank"
+                >Live Demo</a
+              >
+            </div>
+          </article>
 
-      <div class="project-card">
-        <img src="assets/images/project13.png" alt="DailyRoots preview" loading="lazy">
-        <h3>DailyRoots</h3>
-        <p>Habit tracking and productivity app.</p>
-        <a href="https://dailyroots.netlify.app/" class="btn primary" target="_blank" rel="noopener noreferrer">
-          Live Demo
-        </a>
-      </div>
+          <article class="project-card">
+            <div class="project-card__thumb">
+              <img
+                src="assets/images/project11.png"
+                alt="LifeKey preview"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-card__body">
+              <h3>LifeKey</h3>
+              <p>Daily life management and reminder system.</p>
+              <div class="project-card__tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <a
+                href="https://lifekey.netlify.app/"
+                class="btn btn--card"
+                target="_blank"
+                >Live Demo</a
+              >
+            </div>
+          </article>
 
-      <div class="project-card">
-        <img src="assets/images/project14.png" alt="Classify Table preview" loading="lazy">
-        <h3>Classify Table</h3>
-        <p>Table data classification tool.</p>
-        <a href="https://classify-table.netlify.app/" class="btn primary" target="_blank" rel="noopener noreferrer">
-          Live Demo
-        </a>
-      </div>
+          <article class="project-card">
+            <div class="project-card__thumb">
+              <img
+                src="assets/images/project12.png"
+                alt="SmartShelf preview"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-card__body">
+              <h3>SmartShelf</h3>
+              <p>Book and resource management system.</p>
+              <div class="project-card__tags">
+                <span>Web</span><span>Database</span>
+              </div>
+              <a
+                href="https://smartshelf-org.netlify.app/"
+                class="btn btn--card"
+                target="_blank"
+                >Live Demo</a
+              >
+            </div>
+          </article>
 
-      <div class="project-card">
-        <img src="assets/images/project15.png" alt="KeySonic preview" loading="lazy">
-        <h3>KeySonic</h3>
-        <p>Typing speed and accuracy tester.</p>
-        <a href="https://keysonic.netlify.app/" class="btn primary" target="_blank" rel="noopener noreferrer">
-          Live Demo
-        </a>
-      </div>
+          <article class="project-card">
+            <div class="project-card__thumb">
+              <img
+                src="assets/images/project13.png"
+                alt="DailyRoots preview"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-card__body">
+              <h3>DailyRoots</h3>
+              <p>Habit tracking and productivity app.</p>
+              <div class="project-card__tags">
+                <span>JavaScript</span><span>Productivity</span>
+              </div>
+              <a
+                href="https://dailyroots.netlify.app/"
+                class="btn btn--card"
+                target="_blank"
+                >Live Demo</a
+              >
+            </div>
+          </article>
 
-      <div class="project-card">
-        <img src="assets/images/project16.png" alt="EmojiRPS preview" loading="lazy">
-        <h3>EmojiRPS</h3>
-        <p>Fun emoji-based Rock Paper Scissors game.</p>
-        <a href="https://emojirps.netlify.app/" class="btn primary" target="_blank" rel="noopener noreferrer">
-          Live Demo
-        </a>
-      </div>
+          <article class="project-card">
+            <div class="project-card__thumb">
+              <img
+                src="assets/images/project14.png"
+                alt="Classify Table preview"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-card__body">
+              <h3>Classify Table</h3>
+              <p>Table data classification tool.</p>
+              <div class="project-card__tags">
+                <span>Data</span><span>Web</span>
+              </div>
+              <a
+                href="https://classify-table.netlify.app/"
+                class="btn btn--card"
+                target="_blank"
+                >Live Demo</a
+              >
+            </div>
+          </article>
 
-      <div class="project-card">
-        <img src="assets/images/project17.png" alt="ARTFOLIO preview" loading="lazy">
-        <h3>ARTFOLIO</h3>
-        <p>Personal digital art portfolio. Explore, order, and connect.</p>
-        <a href="https://artfolioweb.netlify.app/" class="btn primary" target="_blank" rel="noopener noreferrer">
-          Live Demo
-        </a>
-      </div>
+          <article class="project-card">
+            <div class="project-card__thumb">
+              <img
+                src="assets/images/project15.png"
+                alt="KeySonic preview"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-card__body">
+              <h3>KeySonic</h3>
+              <p>Typing speed and accuracy tester.</p>
+              <div class="project-card__tags">
+                <span>JavaScript</span><span>Game</span>
+              </div>
+              <a
+                href="https://keysonic.netlify.app/"
+                class="btn btn--card"
+                target="_blank"
+                >Live Demo</a
+              >
+            </div>
+          </article>
 
-      <div class="project-card">
-        <img src="assets/images/project18.png" alt="ARTFOLIO preview" loading="lazy">
-        <h3>Donor Hub</h3>
-        <p>Connecting blood donors with those in need through a fast and reliable platform.</p>
-        <a href="https://donor-hub-iayt.onrender.com/" class="btn primary" target="_blank" rel="noopener noreferrer">
-          Live Demo
-        </a>
-      </div>
+          <article class="project-card">
+            <div class="project-card__thumb">
+              <img
+                src="assets/images/project16.png"
+                alt="EmojiRPS preview"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-card__body">
+              <h3>EmojiRPS</h3>
+              <p>Fun emoji-based Rock Paper Scissors game.</p>
+              <div class="project-card__tags">
+                <span>JavaScript</span><span>Game</span>
+              </div>
+              <a
+                href="https://emojirps.netlify.app/"
+                class="btn btn--card"
+                target="_blank"
+                >Live Demo</a
+              >
+            </div>
+          </article>
 
-      <div class="project-card">
-        <img src="assets/images/project19.png" alt="ARTFOLIO preview" loading="lazy">
-        <h3>SmartTravel</h3>
-        <p>Plan personalized trips, explore amazing destinations, manage smart bookings, and get real-time travel updates all in one place.</p>
-        <a href="https://smart-travel-planner-8kkb.onrender.com" class="btn primary" target="_blank" rel="noopener noreferrer">
-          Live Demo
-        </a>
-      </div>
+          <article class="project-card">
+            <div class="project-card__thumb">
+              <img
+                src="assets/images/project17.png"
+                alt="ARTFOLIO preview"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-card__body">
+              <h3>ARTFOLIO</h3>
+              <p>
+                Personal digital art portfolio to explore, order, and connect.
+              </p>
+              <div class="project-card__tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <a
+                href="https://artfolioweb.netlify.app/"
+                class="btn btn--card"
+                target="_blank"
+                >Live Demo</a
+              >
+            </div>
+          </article>
 
-    </div>
-  </main>
+          <article class="project-card">
+            <div class="project-card__thumb">
+              <img
+                src="assets/images/project18.png"
+                alt="Donor Hub preview"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-card__body">
+              <h3>Donor Hub</h3>
+              <p>Connecting blood donors with people in need.</p>
+              <div class="project-card__tags">
+                <span>Django</span><span>Python</span><span>Web</span>
+              </div>
+              <a
+                href="https://donor-hub-iayt.onrender.com/"
+                class="btn btn--card"
+                target="_blank"
+                >Live Demo</a
+              >
+            </div>
+          </article>
 
-  <!-- ===== Footer ===== -->
-  <footer class="footer">
-    <p>© 2025 Aju Krishna B. All Rights Reserved.</p>
-  </footer>
+          <article class="project-card">
+            <div class="project-card__thumb">
+              <img
+                src="assets/images/project19.png"
+                alt="SmartTravel preview"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-card__body">
+              <h3>SmartTravel</h3>
+              <p>
+                Smart travel planner with personalized trips and booking
+                management.
+              </p>
+              <div class="project-card__tags">
+                <span>Django</span><span>Python</span><span>AI</span>
+              </div>
+              <a
+                href="https://smart-travel-planner-8kkb.onrender.com"
+                class="btn btn--card"
+                target="_blank"
+                >Live Demo</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
 
-</body>
+    <footer class="footer">
+      <p>© <span id="year"></span> Aju Krishna.B. Built while learning.</p>
+      <a href="index.html">Back to top ↑</a>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
 </html>
-
-
-
-
-
-
