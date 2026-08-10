@@ -1,68 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Resume | Aju Krishna B</title>
-
-  <!-- CSS -->
-<link rel="stylesheet" href="css/style.css" />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/icons/logo.png" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume | Aju Krishna.B</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- ===== Navbar ===== -->
-<header>
-  <nav class="navbar">
-    <div class="logo">Aju Krishna.B</div>
+<div class="lamp-glow" aria-hidden="true"></div>
 
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+<header class="nav">
+  <a class="nav__brand" href="index.html">AK<span class="dot">.</span></a>
+  <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="nav__links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html"><img class="nav__icon" src="assets/icons/about.png" alt="">About</a>
+    <a href="skills.html"><img class="nav__icon" src="assets/icons/skills.png" alt="">Skills</a>
+    <a href="projects.html"><img class="nav__icon" src="assets/icons/projects.png" alt="">Projects</a>
+    <a href="resume.html" class="is-active"><img class="nav__icon" src="assets/icons/resume.png" alt="">Resume</a>
+    <a href="contact.html" class="nav__cta">Contact</a>
   </nav>
 </header>
 
-  <!-- ===== Resume Section ===== -->
-  <main class="resume-section">
-    <h1>My <span>Resume</span></h1>
-    <p class="resume-intro">
-      You can view my resume below or download a copy for offline reference.
-    </p>
+<main>
+  <div class="page-header">
+    <img class="page-header__icon" src="assets/icons/resume.png" alt="">
+    <h1 class="page-header__title">My <span>Resume</span></h1>
+  </div>
 
-    <div class="resume-actions">
-      <a href="assets/resume.pdf" class="btn primary" download>
-        Download Resume
-      </a>
-      <a href="assets/resume.pdf" class="btn secondary" target="_blank" rel="noopener noreferrer">
-        View Fullscreen
-      </a>
+  <section class="section" style="border-top:none;">
+    <p class="section__sub">A quick summary of where I'm at. Download the full PDF for the details.</p>
+
+    <div class="hero__actions" style="margin-top:28px; margin-bottom:56px;">
+      <a href="assets/resume.pdf" class="btn btn--primary" download>Download Resume (PDF)</a>
     </div>
 
-    <!-- Resume Preview -->
-    <div class="resume-preview">
-      <iframe
-        src="assets/resume.pdf"
-        title="Aju Krishna Resume"
-        loading="lazy">
-      </iframe>
-    </div>
-  </main>
+    <ol class="journal-list">
+      <li>
+        <span class="journal-list__date">Education</span>
+        <p>Your school / course name, expected graduation year — swap in your real details.</p>
+      </li>
+      <li>
+        <span class="journal-list__date">Learning</span>
+        <p>Self-taught web development: HTML, CSS, JavaScript, and now exploring frameworks and backend basics.</p>
+      </li>
+      <li>
+        <span class="journal-list__date">Projects</span>
+        <p>12+ personal and course projects — see the <a href="projects.html" style="color:var(--teal); text-decoration:underline;">Projects page</a> for the full list.</p>
+      </li>
+      <li>
+        <span class="journal-list__date">Currently</span>
+        <p>Looking for internships, collaborations, or just people to learn alongside.</p>
+      </li>
+    </ol>
+  </section>
+</main>
 
-  <!-- ===== Footer ===== -->
-  <footer class="footer">
-    <p>© 2025 Aju Krishna B. All Rights Reserved.</p>
-  </footer>
+<footer class="footer">
+  <p>© <span id="year"></span> Aju Krishna.B. Built while learning.</p>
+  <a href="index.html">Back to top ↑</a>
+</footer>
 
+<script src="js/script.js"></script>
 </body>
 </html>
-
-
-
-
